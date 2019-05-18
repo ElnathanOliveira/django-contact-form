@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load bootstrap %}
+<div class="row">
+        <div class="col-sm-10" style="background-color:rgb(206, 206, 197); text-align: center">
+                <h4>Contato</h4>
+        </div>
+</div>
+<form name="form" action="" method="POST">
+{% csrf_token %}
+        <div class="row">
+                <div class="col-sm-10" style="background-color:rgb(206, 206, 197);">
+                        <p>
+                            {{form|bootstrap}}                            
+                        </p>
+                </div>                       
+        </div>        
+        <div class="row">
+                <div class="col-sm-10" style="padding: 1.5%;">
+                        <a href="{% url 'datatable' %}">
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                        </a>                        
+                </div>                              
+        </div>  
+</form>
+{% endblock content %}

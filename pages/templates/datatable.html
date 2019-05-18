@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Assunto</th>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in  list_contact %}
+                <tr class="clickable-row" data-href="{% url 'datatable'%}">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.subject}}</td>
+                    <td>{{item.message}}</td>
+                </tr>
+            </a>
+            {% endfor%}
+
+        </tbody>    
+        <tfoot>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Assunto</th>
+                <th>Mensagem</th>
+            </tr>
+        </tfoot>
+    </table>
+    <div>
+            <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-primary">Retornar</button>
+                </a> 
+    </div>  
+{% endblock content %}

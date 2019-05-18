@@ -1,0 +1,10 @@
+.clickable-row{
+    cursor: pointer;
+    background-color : rgb(234, 237, 238) ;
+}
+tr.clickable-row.odd:hover{
+    background-color :  rgb(170, 207, 238) ;
+}
+tr.clickable-row.even:hover{
+  background-color :  rgb(170, 207, 238) ;
+}
